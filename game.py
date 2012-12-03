@@ -1,4 +1,3 @@
-
 from sys import exit
 import time
 from random import randint
@@ -225,8 +224,9 @@ def sleep(location):
 				print "Silly boy, you died to some wimpy bandits."
 				exit()
 			if bandit_health == 0:
-				print "You finally slay the last of the bandits. As you search their bodies you find 100 money on their person."
-					gain_money(100)		
+				random = randint(50,200)
+				print "You finally slay the last of the bandits. As you search their bodies you find %d money on their person." %(random)
+					gain_money(random)		
 			
 
 def fighting(location):
