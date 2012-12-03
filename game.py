@@ -50,7 +50,7 @@ def home(intro):
                 Here you can buy weapons, sleep to regain energy, or buy food to regain health. 
                 Your energy determines how much you can do before you have to go to sleep.
                 You currently have %d money, %d health, and %d energy.
-                """ % (name_input, money, health, energy)
+                """ % (name, money, health, energy)
                 home(False)
         if intro == False:
                 print "Would you like to sleep, buy food, or buy weapons?"
