@@ -13,7 +13,7 @@ def intro():
 	print "Name?"
 
 	name_input = raw_input("--> ")
-	
+
 
 	print "Are you sure you want your name to be %r?" % name_input
 
@@ -209,7 +209,8 @@ def sleep(location):
 				action = raw_input("--> ")
 				bandit_health = 2
 				if action == "hide":
-				print "Because of your amazing ninja skills, you are able to hide from the bandits. Unfortunately, they managed to make off with some of your money."
+				print "Because of your amazing ninja skills, you are able to hide from the bandits.
+				print "Unfortunately, they managed to make off with some of your money."
 					lose_money(50)
 				if action == "fight":
 					while health > 0 and bandit_health > 0:
@@ -227,7 +228,7 @@ def sleep(location):
 				random = randint(50,200)
 				print "You finally slay the last of the bandits. As you search their bodies you find %d money on their person." %(random)
 					gain_money(random)		
-			
+
 
 def fighting(location):
 	if location = "forest":
@@ -282,7 +283,7 @@ def buy_weapon():
 			print "You equiped bow."
 		elif money < 300:
 			print "You do not have enough money for this item. Try again later."
-			
+
 	if 'mastodon' in choose_weapon:
 		if money >= 500:
 			lose_money(500)
@@ -402,7 +403,7 @@ def squareC2(entered):
 		pass
 	elif entered == "west":
 		pass
-	
+
 def squareC4(entered):
 	if entered == "south":
 		pass
