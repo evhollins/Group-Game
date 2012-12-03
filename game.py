@@ -243,8 +243,9 @@ sword1 = [3, 100, 3]
 sword2 = [5, 200, 4]
 sword3 = [10, 300, 3]
 bow = [randint(1,10), 300, 5]
-weapons = [wooden_sword, sword1, sword2, sword3, bow]
-weapons_text = ['wooden_sword: 0', 'sword1: 100', 'sword2: 200', 'sword3: 300', 'bow: 300']
+mastadon_tooth = [25, 500, 1]
+weapons = [wooden_sword, sword1, sword2, sword3, bow, mastodon_tooth]
+weapons_text = ['wooden_sword: 0', 'sword1: 100', 'sword2: 200', 'sword3: 300', 'bow: 300', 'mastodon_tooth: 500']
 
 
 def buy_weapon():
@@ -280,6 +281,14 @@ def buy_weapon():
 			weapon = bow
 			print "You equiped bow."
 		elif money < 300:
+			print "You do not have enough money for this item. Try again later."
+			
+	if 'mastodon' in choose_weapon:
+		if money >= 500:
+			lose_money(500)
+			weapon = bow
+			print "You equiped mastodon tooth."
+		elif money < 500:
 			print "You do not have enough money for this item. Try again later."
 	home(False)
 
