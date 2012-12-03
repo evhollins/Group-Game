@@ -1,3 +1,5 @@
+#cheat codes:
+#enter mittromney in buy weapons for 10000000000000000000 money
 
 from sys import exit
 import time
