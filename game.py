@@ -1,3 +1,4 @@
+
 from sys import exit
 import time
 from random import randint
@@ -5,11 +6,12 @@ money = 0
 health = 10
 energy = 10
 weapon = "Wooden Sword"
-name = "No Name"
 
 
 
 def intro():
+        global name_input
+
         print "Name?"
 
         name_input = raw_input("--> ")
@@ -44,13 +46,14 @@ def introno():
                 introno()
 
 def home(intro):
+        global name_input
         if intro == True:
                 print """
                 Welcome to your house, %r!
                 Here you can buy weapons, sleep to regain energy, or buy food to regain health. 
                 Your energy determines how much you can do before you have to go to sleep.
                 You currently have %d money, %d health, and %d energy.
-                """ % (name, money, health, energy)
+                """ % (name_input, money, health, energy)
                 home(False)
         if intro == False:
                 print "Would you like to sleep, buy food, or buy weapons?"
