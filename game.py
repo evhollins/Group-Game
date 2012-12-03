@@ -209,7 +209,7 @@ def sleep(location):
 				action = raw_input("--> ")
 				bandit_health = 2
 				if action == "hide":
-				print "Because of your amazing ninja skills, you are able to hide from the bandits.
+				print "Because of your amazing ninja skills, you are able to hide from the bandits."
 				print "Unfortunately, they managed to make off with some of your money."
 					lose_money(50)
 				if action == "fight":
