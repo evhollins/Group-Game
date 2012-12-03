@@ -1,4 +1,3 @@
-
 from sys import exit
 import time
 from random import randint
@@ -251,6 +250,10 @@ weapons_text = ['wooden_sword: 0', 'sword1: 100', 'sword2: 200', 'sword3: 300', 
 def buy_weapon():
         print "You can currently buy:", weapons_text
         choose_weapon = raw_input("What would you like to buy? -->  ")
+        if "mittromney" in choose_weapon:
+                global money
+                money = money + 10000000000000000000
+                print money
         if 'wooden' in choose_weapon:
                 weapon = wooden_sword
                 print "You equiped wooden_sword."
