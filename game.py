@@ -13,7 +13,7 @@ def intro():
 	print "Name?"
 
 	name_input = raw_input("--> ")
-	
+
 
 	print "Are you sure you want your name to be %r?" % name_input
 
@@ -227,7 +227,7 @@ def sleep(location):
 				random = randint(50,200)
 				print "You finally slay the last of the bandits. As you search their bodies you find %d money on their person." %(random)
 					gain_money(random)		
-			
+
 
 def fighting(location):
 	if location = "forest":
@@ -243,6 +243,7 @@ sword1 = [3, 100, 3]
 sword2 = [5, 200, 4]
 sword3 = [10, 300, 3]
 bow = [randint(1,10), 300, 5]
+flamethrower = [25, 500, 1]
 weapons = [wooden_sword, sword1, sword2, sword3, bow]
 weapons_text = ['wooden_sword: 0', 'sword1: 100', 'sword2: 200', 'sword3: 300', 'bow: 300']
 
@@ -393,7 +394,7 @@ def squareC2(entered):
 		pass
 	elif entered == "west":
 		pass
-	
+
 def squareC4(entered):
 	if entered == "south":
 		pass
