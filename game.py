@@ -1,5 +1,6 @@
 #cheat codes:
 #enter mittromney in buy weapons for 10000000000000000000 money
+#enter bignosemalone to get huge nose
 
 from sys import exit
 import time
@@ -247,6 +248,7 @@ wooden_sword = [1, 0, 2]
 sword1 = [3, 100, 3]
 sword2 = [5, 200, 4]
 sword3 = [10, 300, 3]
+huge_nose = [5, False, 5]
 bow = [randint(1,10), 300, 5]
 weapons = [wooden_sword, sword1, sword2, sword3, bow]
 weapons_text = ['wooden_sword: 0', 'sword1: 100', 'sword2: 200', 'sword3: 300', 'bow: 300']
@@ -259,6 +261,9 @@ def buy_weapon():
                 global money
                 money = money + 10000000000000000000
                 print money
+        if "bignosemalone" in choose_weapon:
+                global weapon
+                weapon = huge_nose
         if 'wooden' in choose_weapon:
                 weapon = wooden_sword
                 print "You equiped wooden_sword."
