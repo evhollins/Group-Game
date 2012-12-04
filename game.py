@@ -231,7 +231,42 @@ def sleep(location):
                                 exit()
                         if bandit_health == 0:
                                 print "You finally slay the last of the bandits. As you search their bodies you find 100 money on their person."
-                                gain_money(100)         
+                                gain_money(100)    
+
+                if location == "caves":
+                        print """
+                        You hear drops of water ploping on rocks around you. You wonder how you will ever fall asleep on these rocks.
+                        Then, out of the darkness, you hear what you make out to be an angry llama. You decide to move campsites.
+                        After lying awake about half the night, you are finally able to fall asleep.
+                        """     
+                        sleep_caves_randint = randint(1,5)
+                        if sleep_caves_randint <= 3:
+                                print "Sleeping..."
+                                time.sleep(1)
+                                print "Sleeping..."
+                                time.sleep(1)
+                                print "Sleeping..."
+                                time.sleep(1)
+                                print "Sleeping..."
+                                time.sleep(1)
+                                print "Sleeping..."
+                                time.sleep(1)
+                                print """
+                                You don't get a very good nights sleep. You gained %d energy.
+                                """ % sleep_caves_randint
+                                gain_energy(sleep_caves_randint)
+                        else:
+                                print "Sleeping..."
+                                time.sleep(1)
+                                print "Sleeping..."
+                                time.sleep(1)
+                                print "Sleeping..."
+                                time.sleep(1)
+                                print "Sleeping..."
+                                time.sleep(1)
+                                print "Sleeping..."
+                                time.sleep(1)
+
 
 
 def fighting(location):
@@ -240,6 +275,8 @@ def fighting(location):
         if location == "grass":
                 pass
         if location == "desert":
+                pass
+        if location == "caves":
                 pass
 
 
