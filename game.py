@@ -55,6 +55,7 @@ def home(intro):
                 Here you can buy weapons, sleep to regain energy, or buy food to regain health. 
                 Your energy determines how much you can do before you have to go to sleep.
                 You currently have %d money, %d health, and %d energy.
+                The maixmum health and energy you can have is 10.
                 """ % (name_input, money, health, energy)
                 home(False)
         while intro == False:
@@ -66,30 +67,35 @@ def home(intro):
                         buy_weapon()
 
 def lose_money(amount):
+        global money
         lose_money_repeats = 0
         while lose_money_repeats <= amount and money >= 0:
                 money = money - 1
                 lose_money_repeats = lose_money_repeats + 1
 
 def gain_energy(amount):
+        global energy
         gain_energy_repeats = 0
         while gain_energy_repeats <= amount and energy <= 10:
                 energy = energy + 1
                 gain_energy_repeats = gain_energy_repeats + 1
 
 def lose_energy(amount):
+        global energy
         lose_energy_repeats = 0
         while lose_energy_repeats <= amount and energy >= 0:
                 energy = energy - 1
                 lose_energy_repeats = lose_energy_repeats + 1
 
 def gain_health(amount):
+        global health
         gain_health_repeats = 0
         while gain_health_repeats <= amount and health <= 10:
                 health = health + 1
                 gain_health_repeats = gain_health_repeats + 1
 
 def lose_health(amount):
+        global health
         lose_health_repeats = 0
         while lose_health_repeats <= amount and health >= 0:
                 health = health - 1
