@@ -1,6 +1,5 @@
 #cheat codes:
 #enter mittromney in buy weapons for 10000000000000000000 money
-#enter bignosemalone to get huge nose
 
 from sys import exit
 import time
@@ -50,7 +49,7 @@ def introno():
 
 def home(intro):
         global name_input
-        if intro == True:
+        while intro == True:
                 print """
                 Welcome to your house, %r!
                 Here you can buy weapons, sleep to regain energy, or buy food to regain health. 
@@ -58,13 +57,14 @@ def home(intro):
                 You currently have %d money, %d health, and %d energy.
                 """ % (name_input, money, health, energy)
                 home(False)
-        if intro == False:
-                print "Would you like to sleep, buy food, or buy weapons?"
+        while intro == False:
+                print "Would you like to sleep, move, buy food, or buy weapons?"
                 home_action = raw_input("->  ")
-                if home_action == "sleep":
+                while home_action == "sleep":
                         sleep("home")
-                if "weapon" in home_action or "weapons" in home_action:
-                        buy_weapon() 
+                while "weapon" in home_action or "weapons" in home_action:
+                        buy_weapon()
+
 def lose_money(amount):
         lose_money_repeats = 0
         while lose_money_repeats <= amount and money >= 0:
@@ -231,43 +231,7 @@ def sleep(location):
                                 exit()
                         if bandit_health == 0:
                                 print "You finally slay the last of the bandits. As you search their bodies you find 100 money on their person."
-                                gain_money(100)    
-
-                if location == "caves":
-                        print """
-                        You hear drops of water ploping on rocks around you. You wonder how you will ever fall asleep on these rocks.
-                        Then, out of the darkness, you hear what you make out to be an angry llama. You decide to move campsites.
-                        After lying awake about half the night, you are finally able to fall asleep.
-                        """     
-                        sleep_caves_randint = randint(1,5)
-                        if sleep_caves_randint <= 3:
-                                print "Sleeping..."
-                                time.sleep(1)
-                                print "Sleeping..."
-                                time.sleep(1)
-                                print "Sleeping..."
-                                time.sleep(1)
-                                print "Sleeping..."
-                                time.sleep(1)
-                                print "Sleeping..."
-                                time.sleep(1)
-                                print """
-                                You don't get a very good nights sleep. You gained %d energy.
-                                """ % sleep_caves_randint
-                                gain_energy(sleep_caves_randint)
-                        else:
-                                print "Sleeping..."
-                                time.sleep(1)
-                                print "Sleeping..."
-                                time.sleep(1)
-                                print "Sleeping..."
-                                time.sleep(1)
-                                print "Sleeping..."
-                                time.sleep(1)
-                                print "Sleeping..."
-                                time.sleep(1)
-
-
+                                gain_money(100)         
 
 def fighting(location):
         if location == "forest":
@@ -276,8 +240,6 @@ def fighting(location):
                 pass
         if location == "desert":
                 pass
-        if location == "caves":
-                pass
 
 
 # weapon = [damage, price, acuracy out of 5]
@@ -285,7 +247,6 @@ wooden_sword = [1, 0, 2]
 sword1 = [3, 100, 3]
 sword2 = [5, 200, 4]
 sword3 = [10, 300, 3]
-huge_nose = [5, False, 5]
 bow = [randint(1,10), 300, 5]
 weapons = [wooden_sword, sword1, sword2, sword3, bow]
 weapons_text = ['wooden_sword: 0', 'sword1: 100', 'sword2: 200', 'sword3: 300', 'bow: 300']
@@ -298,9 +259,6 @@ def buy_weapon():
                 global money
                 money = money + 10000000000000000000
                 print money
-        if "bignosemalone" in choose_weapon:
-                global weapon
-                weapon = huge_nose
         if 'wooden' in choose_weapon:
                 weapon = wooden_sword
                 print "You equiped wooden_sword."
@@ -334,6 +292,15 @@ def buy_weapon():
                         print "You do not have enough money for this item. Try again later."
         home(False)
 
+def squareA1(entered):
+        if entered == "south":
+                pass
+        elif entered == "north":
+                pass
+        elif entered == "east":
+                pass
+        elif entered == "west":
+                pass
 
 def squareA2(entered):
         if entered == "south":
